@@ -17,13 +17,15 @@ public class TestDrive {
     System.out.println("Thanks for jumping on the moped.  We're currently parked outside Dr. Rossinsky DDS's office at 10th St. and 5th Ave, facing South.  May I say your teeth look very clean.");
     System.out.println("What would you like to do?  At any time, say \"help\" for assistance.");
 
-    boolean keepGoing = true;
     String response = "";
     while (!response.equals("park")) {
       response = scn.nextLine();
         switch (response) {
             case "go left":
                 m.goLeft();
+                m.printLocation();
+                break;
+            case "x":
                 m.printLocation();
                 break;
             case "go right":
@@ -51,7 +53,7 @@ public class TestDrive {
             	System.out.println(m.getHelp());
             	break;
             case "go to Xi’an Famous Foods":
-                m.goToXianFamousFoods();
+                m.goToXianFoods();
                 break;
             default:
                 System.out.println("I'm sorry, I don't understand that command. Type 'help' for a list of commands");
