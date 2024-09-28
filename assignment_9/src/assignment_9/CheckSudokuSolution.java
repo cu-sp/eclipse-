@@ -31,7 +31,7 @@ public class CheckSudokuSolution {
 		// Complete the method here.
 
 		for(int i = 0; i < 9; i++) {
-			for(int j = 0; j < 9; j++) {
+			for(int j = 0; j < 9; j++)  {
 				System.out.println("enter number for "+(i+1)+"x"+(j+1)+ ": ");
 				grid[i][j] = scn.nextInt();
 			}
